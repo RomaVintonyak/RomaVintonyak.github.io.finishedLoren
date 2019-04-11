@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
+*{
+    font-family: Roboto, sans-serif;
+}
+.unic-font{
+    font-family: Releway, sans-serif;
+}
+/*style for index page*/
+html, body, header, #intro{
+    height: 100%;
+}
+#intro{
+    background: url("../img/index/bg2.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.top-nav-collapse{
+    background-color: #717171;
+}
+@media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse){
+        background: #717171;
+    }
+}
+.info-block img{
+   width: 20%;
+}
+.mainBlock h4:hover{
+    text-shadow: 3px 3px 3px #8f8f8f;
+    transition: text-shadow 300ms linear 0ms;
+    cursor: pointer;
+}
+/*hover text block*/
+.hower:hover{
+    transform: rotate(0deg) scale(1.1,1.1) ;
+    box-shadow: 1px 1px 1px #cacaca;
+    z-index: 999;
+    transition: transform 300ms linear 100ms,
+    box-shadow 300ms linear 0ms, z-index 300ms linear 0ms;
+    background: #f4f4f4;
+}
+/*rotate img for main block*/
+.rotate:hover {
+    -webkit-transform: rotateZ(20deg);
+    -ms-transform: rotateZ(20deg);
+    transform: rotateZ(20deg);
+    cursor: pointer;
+}
+/*smoke effect for main title*/
+.smoke {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+}
+.smoke ul {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+}
+.smoke ul li {
+    list-style: none;
+    color: #000000;
+    font-size: 4em;
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.smoke ul:hover li {
+    animation: animate 2s linear forwards;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg) translateY(0px);
+        opacity: 1;
+        filter: blur(1px);
+    }
+    100% {
+        transform: rotate(45deg) translateY(-200px);
+        opacity: 0;
+        filter: blur(20px);
+    }
+}
+
+.smoke ul li:nth-child(1) {
+    animation-delay: 0s;
+}
+.smoke ul li:nth-child(2) {
+    animation-delay: .4s;
+}
+.smoke ul li:nth-child(3) {
+    animation-delay: .8s;
+}
+.smoke ul li:nth-child(4) {
+    animation-delay: 1.2s;
+}
+.smoke ul li:nth-child(5) {
+    animation-delay: 1.6s;
+}
+/*****end index page********/
+
+/*********about-us**********/
+/*******end about-us*******/
+
+
+/********our-services******/
+.card:hover{
+    -webkit-box-shadow: -1px 9px 40px -12px rgb(25,25,25);
+    -moz-box-shadow: -1px 9px 40px -12px rgb(25,25,25);
+    -box-shadow: -1px 9px 40px -12px rgb(25,25,25);
+}
+.col-lg-4{
+    padding: 1%;
+}
+.card{
+    height: 32em;
+}
+
+.card img{
+    width: 100%;
+    height: 300px;
+}
+/******end our-services*****/
+/******galery**************/
+.photo img {
+    border: 4px solid #eee;
+}
+.photo a {
+    display: block;
+    position: relative;
+}
+.photo a:hover {
+    opacity: 0.6;
+}
+.photo a:after {
+    content: '';
+    background: transparent url(../img/galery/eye-icon.png) no-repeat center;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+}
+.photo:hover > a:after {
+    visibility: visible;
+}
+/********end galery*******/
+/* begin Scroll Down Button */
+button.scroll_down {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    height: 45px;
+    width: 25px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+}
+
+button.scroll_down:before {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    content: '';
+    width: 7px;
+    height: 7px;
+    margin-left: -3px;
+    background-color: #fff;
+    border-radius: 100%;
+    -webkit-animation: scroll_down_btn-animation 2s infinite;
+    animation: scroll_down_btn-animation 2s infinite;
+    box-sizing: border-box;
+}
+
+@keyframes scroll_down_btn-animation {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes scroll_down_btn-animation {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        -webkit-transform: translate(0, 20px);
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/* end Scroll Down Button */
