@@ -97,27 +97,27 @@
                 Вами</h4>
             <div class="row">
                 <div class="col-lg-6 col-md-12 wow bounceInLeft">
-                    <form class="p-4" id="feedback">
+                    <form class="p-4" id="contactForm">
                         <div class="md-form">
                             <i class="fas fa-user prefix grey-text"></i>
-                            <input type="text" id="name" class="form-control form-control-sm" required>
+                            <input type="text" id="name" name="name" class="form-control form-control-sm">
                             <label for="name">Ваше ім'я</label>
                         </div>
                         <div class="md-form">
                             <i class="fas fa-envelope prefix grey-text"></i>
-                            <input type="email" id="mail" pattern="/^[a-zA-Z0-9.!#$%&*+/=?^_'{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" class="form-control form-control-sm" required>
-                            <label for="mail">Ваш email</label>
+                            <input type="email" id="email" name="email" class="form-control form-control-sm">
+                            <label for="email">Ваш email</label>
                         </div>
                         <div class="md-form ">
                             <i class="fas fa-phone-volume prefix grey-text"></i>
-                            <input type="tel" id="phone" class="form-control form-control-sm" required>
+                            <input type="tel" id="phone" name="phone" class="form-control form-control-sm">
                             <label for="phone">Ваш телефон</label>
                         </div>
                         <div class="md-form ">
                             <i class="fas fa-pencil-alt prefix grey-text"></i>
-                            <textarea type="text" id="mesag" class="md-textarea form-control form-control-sm"
+                            <textarea name="message" id="message" class="md-textarea form-control form-control-sm"
                                       rows="2"></textarea>
-                            <label for="mesag">Залиште повідомлення</label>
+                            <label for="message">Залиште повідомлення</label>
                         </div>
                         <div class="form-check">
                             <label class="form-check-label">
@@ -126,10 +126,10 @@
                             </label>
                         </div>
                         <div class="text-center mt-4">
-                            <button id="sendmail" type="button" class="btn btn-outline-elegant waves-effect waves-float">Відправити<i
+                            <button id="sendMail" type="button" class="btn btn-outline-elegant waves-effect waves-float">Відправити<i
                                     class="fas fa-paper-plane ml-2"></i></button>
                         </div>
-                        <div id="erorMesag" class="red-text"></div>
+                        <div id="errorText" class="red-text" style="height: 16px; width: 100%"></div>
                     </form>
                 </div>
                 <div class="col-lg-6 col-md-12 p-5 wow bounceInRight">

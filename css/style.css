@@ -52,7 +52,9 @@ html, body, header, #intro {
     box-shadow 300ms linear 0ms, z-index 300ms linear 0ms;
     background: #f4f4f4;
 }
-
+.padding{
+    padding: 1em;
+}
 /*rotate img for main block*/
 .rotate:hover {
     -webkit-transform: rotateZ(20deg);
@@ -434,3 +436,4 @@ button.scroll_down {
     }
 }
 /* end call button */
+
