@@ -44,25 +44,28 @@ html, body, header, #intro {
 }
 
 /*hover text block*/
-.hower:hover {
-    transform: rotate(0deg) scale(1.1, 1.1);
-    box-shadow: 1px 1px 1px #cacaca;
-    z-index: 999;
-    transition: transform 300ms linear 100ms,
-    box-shadow 300ms linear 0ms, z-index 300ms linear 0ms;
-    background: #f4f4f4;
-}
-.padding{
-    padding: 1em;
-}
-/*rotate img for main block*/
-.rotate:hover {
-    -webkit-transform: rotateZ(20deg);
-    -ms-transform: rotateZ(20deg);
+.hower {
+    transform: scale(0.9);
+    transition: box-shadow 0.5s linear, transform 0.5s linear;
+  }
+  .hower:hover {
+    transform: scale(1) translateX(-35px);
+    box-shadow: 10px 10px 10px #8f8f8f;
+    cursor: zoom-in;
+  }
+  .padding {
+    padding: 0.7em;
+  }
+  /*rotate img for main block*/
+  .rotate {
+    transform: rotateZ(0deg);
+    transition: transform 0.3s linear;
+  }
+  .rotate:hover {
     transform: rotateZ(20deg);
     cursor: pointer;
-}
-
+  }
+  
 /*smoke effect for main title*/
 .smoke {
     position: absolute;
