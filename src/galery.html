@@ -455,11 +455,9 @@
                 <p class="footer-copyright">Всі права захищено &copy;2019 - <script type="text/javascript">document.write(new Date().getFullYear());</script></p>
             </div>
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                <h6 class="text-uppercase font-weight-bold"><strong>Links</strong></h6>
+                <h6 class="text-uppercase font-weight-bold"><strong>Instagram</strong></h6>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 45px">
-                <p><a href="../src/our-services.html">Наші послуги</a></p>
-                <p><a href="../src/adout-us.html">Про нас</a></p>
-                <p><a href="../src/galery.html">Галерея</a></p>
+                <div id="instafeed"></div>
             </div>
             <div class="col-md-4 col-lg-3 col-xl-3">
                 <h6 class="text-uppercase font-weight-bold"><strong>Контакти</strong></h6>
@@ -484,6 +482,27 @@
 <script src="../js/lightbox-plus-jquery.min.js"></script>
 <!--conect ases js file-->
 <script type="text/javascript" src="../js/access.js"></script>
+<!--conect instafeed.js-->
+<script type="text/javascript" src="../js/jquery.instagramFeed.min.js"></script>
+<script type="text/javascript">
+    (function($){
+      $(window).on('load', function(){
+          $.instagramFeed({
+              'username': 'wedding_decor_loren',
+              'container': "#instafeed",
+              'display_profile': false,
+              'display_biography': false,
+              'display_gallery': true,
+              'callback': null,
+              'styling': true,
+              'items': 6,
+              'items_per_row': 3,
+              'margin': 1,
+              'image_size': 150
+          });
+      });
+  })(jQuery);
+</script>
 <!--init wow animations-->
 <script type="text/javascript">
     new WOW().init();
